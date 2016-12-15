@@ -6,7 +6,9 @@ Ruby爬虫统计简书用户的文章信息
 
 * 下载项目代码并运行
 
-```git clone git@github.com:geekeren/jianshu_spider.git
+
+```
+git clone git@github.com:geekeren/jianshu_spider.git
 cd jianshu_spider/
  ruby main.rb
 ```
@@ -22,4 +24,5 @@ view/default.tpl.html是输出文件的模板，所以可以修改输出文件�
 * 每一行记录用户ID(简书用户主页URL /users/后面的字段)，用户姓名，小buddy姓名
 
 ##输出文件
+
  位于out文件夹下
