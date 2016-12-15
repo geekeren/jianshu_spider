@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>@{title}</title>
+    <script src="./jquery.min.js"></script>
+    <style>
+        h1{
+            text-align: center;
+        }
+        body {
+            font-family: "Open Sans","Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+            color: rgb(51, 51, 51);
+            line-height: 1.6;
+        }
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            line-height: 1.42857143;
+            overflow-x: hidden;
+            background-image: inherit;
+            background-size: inherit;
+            background-attachment: inherit;
+            background-origin: inherit;
+            background-clip: inherit;
+            background-color: inherit;
+        }
+
+        body>section {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 20px 30px 10px 30px;
+            height: auto;
+            width: inherit;
+            word-break: normal;
+            word-wrap: break-word;
+            position: relative;
+            overflow-x: auto;
+        }
+        header>section{
+            margin: 10px 5px 15px 5px;
+        }
+        table {
+            text-align: center;
+            border-collapse: collapse;
+            border-spacing: 0px;
+            width: 100%;
+            overflow: auto;
+            page-break-inside: auto;
+        }
+        ::before, ::after, * {
+            box-sizing: border-box;
+        }
+        table tr th:first-child, table tr td:first-child {
+            margin-top: 0;
+        }
+        table tr th {
+            font-weight: bold;
+            border: 1px solid #cccccc;
+            margin: 0;
+        }
+        table tr {
+            border-top: 1px solid #cccccc;
+            background-color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        tr {
+            page-break-inside: avoid;
+            page-break-after: auto;
+        }
+        table tr:nth-child(2n) {
+            background-color: #f8f8f8;
+        }
+        table tr {
+            border-top: 1px solid #cccccc;
+            background-color: white;
+            margin: 0;
+            padding: 0;
+        }
+        table tr td {
+            border: 1px solid #cccccc;
+            margin: 0;
+            padding: 6px 0px 6px 0px;
+        }
+        ::before, ::after, * {
+            box-sizing: border-box;
+        }
+        footer{
+            margin: 30px 0px 30px 0px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<section>
+    <header>
+        <h1>@{title}</h1>
+        <section>统计时间：@{time}</section>
+    </header>
+    <section id="content">
+    <table>
+        <thead>
+        <tr>
+            <th>序号</th>
+            <th>姓名</th>
+            <th>文章数</th>
+            <th>字数</th>
+            <th>阅读量</th>
+            <th>收到评论</th>
+            <th>收到喜欢</th>
+            <th>小buddy姓名</th>
+        </tr>
+        </thead>
+        <tbody>
+        @{content}
+        </tbody>
+    </table>
+    </section>
+    <footer>@{footer}</footer>
+</section>
+<script type="javascript">
+    $.getJSON()
+    $("#content").
+</script>
+</body>
+</html>
