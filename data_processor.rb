@@ -43,12 +43,13 @@ class DataProcessor
         </tr>", i, author.id, author.name, author.post_count, author.word_count, author.read_count, author.comment_count, author.liked_count, author.buddy)
     end
 
-
+    today = Time.new;
+    timeStr= today.strftime("(%Y-%m-%d %H:%M:%S)");
     footer="Powered By <a target=\"_blank\" href=\"http://wangbaiyuan.cn\">BrainWang@ThoughtWorks</a>"
     out = tplContent.gsub(/@\{title\}/, title)
     out = out.gsub(/@\{content\}/, content)
     out = out.gsub(/@\{footer\}/, footer)
-    today = Time.new;
+    out = out.gsub(/@\{time\}/, timeStr)
     timeStr= today.strftime("(%Y-%m-%d)");
     file=open("output/#{title+timeStr}.html","w")
     file.write out
