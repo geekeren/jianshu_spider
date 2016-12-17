@@ -40,7 +40,8 @@ class DataProcessor
             <td>%s</td>
             <td>%s</td>
             <td>%s</td>
-        </tr>", i, author.id, author.name, author.post_count, author.word_count, author.read_count, author.comment_count, author.liked_count, author.buddy)
+            <td>%s</td>
+        </tr>", i, author.id, author.name, author.post_count, author.word_count, author.read_count, author.comment_count, author.liked_count, author.fans_count,author.buddy)
     end
 
     today = Time.new;
@@ -51,9 +52,9 @@ class DataProcessor
     out = out.gsub(/@\{footer\}/, footer)
     out = out.gsub(/@\{time\}/, timeStr)
     timeStr= today.strftime("(%Y-%m-%d)");
-    file=open("output/#{title+timeStr}.html","w")
+    file=open("output/#{title+timeStr}.html", "w")
     file.write out
-    print "\n输出文件位于", Pathname.new(File.dirname(__FILE__)).realpath,"/",file.path,"\n"
+    print "\n输出文件位于", Pathname.new(File.dirname(__FILE__)).realpath, "/", file.path, "\n"
     file.close
 
   end

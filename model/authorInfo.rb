@@ -39,9 +39,14 @@ class AuthorInfo
 
   @comment_count=0
 
+  def fans_count
+    @fans_count.to_i
+  end
+
   def comment_count
     @comment_count.to_i
   end
+
 
   def read_count=(read_count)
     @read_count=read_count
