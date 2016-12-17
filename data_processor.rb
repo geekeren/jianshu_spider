@@ -53,7 +53,7 @@ class DataProcessor
     timeStr= today.strftime("(%Y-%m-%d)");
     file=open("output/#{title+timeStr}.html","w")
     file.write out
-    print "\n输出文件位于", Pathname.new(File.dirname(__FILE__)).realpath,"/",file.path
+    print "\n输出文件位于", Pathname.new(File.dirname(__FILE__)).realpath,"/",file.path,"\n"
     file.close
 
   end
